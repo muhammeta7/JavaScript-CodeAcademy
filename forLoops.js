@@ -34,3 +34,20 @@ for (i=100 ; i>0 ; i-=5){
 }
 
 // Meet arrays 
+var junkData = ["Eddie Murphy", 49, "peanuts", 31];
+
+console.log(junkData[3]); // Should print 31
+
+// Loops and arrays
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Kansas"];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+
+var names = ['Jack', 'Tim', 'Kim', 'Rando', 'Turd'];
+for (var i=0; i<names.length ; i++) {
+    console.log("I know someone called " + names[i] );
+}
+
+// Search for your name
