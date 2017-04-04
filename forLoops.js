@@ -51,3 +51,26 @@ for (var i=0; i<names.length ; i++) {
 }
 
 // Search for your name
+// Prints spaces but overall works
+
+var text = "Hey whats going on? My name is Muhammet and I am worried. I am so frustrated with the current state of affairs.Muhammet is not a name you want to have in the country right now!";
+
+var myName = "Muhammet";
+
+var hits = [];
+
+for (var i=0;i <= text.length;i++){
+    if (text[i] === myName[0]) {
+        for (var j=i;j<=(i+myName.length);j++){
+            if (text.substring(i, (myName.length+i)) === myName){
+                hits.push(text[j]);
+            }
+        }
+    }
+}
+
+if (hits.length === 0) {
+  console.log("Your name wasn't found!");
+} else {
+  console.log(hits);
+}
