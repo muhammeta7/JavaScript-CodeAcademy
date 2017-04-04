@@ -61,7 +61,7 @@ var hits = [];
 
 for (var i=0;i <= text.length;i++){
     if (text[i] === myName[0]) {
-        for (var j=i;j<=(i+myName.length);j++){
+        for (var j=i;j<(i+myName.length);j++){
             if (text.substring(i, (myName.length+i)) === myName){
                 hits.push(text[j]);
             }
