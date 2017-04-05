@@ -84,3 +84,29 @@ getToDaChoppa();
 for(var i=0; i<10; i++){
     console.log(i);
 }
+
+// Dragon Slaying exercise 
+var slaying= true;
+var youHit = Math.floor(Math.random()*2);
+var damageThisRound = Math.floor(Math.random()*5 + 1);
+
+var totalDamage = 0;
+
+while(slaying) {
+  if(youHit){
+     console.log("Congrats you have hit the dragon"); 
+     totalDamage += damageThisRound;
+     if(totalDamage >= 4) {
+         console.log("Congrats you have hit the dragon");
+         slaying = false;
+         console.log(totalDamage);
+     }
+     else {
+         var youHit = Math.floor(Math.random()*2);
+     }
+  }
+  else {
+      console.log("You have been burnt to a crisp by the dragon");
+  }
+  slaying = false;
+}
