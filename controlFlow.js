@@ -102,3 +102,47 @@ switch(answer) {
     default:
         console.log("you are looking to be stressed out");  
 }
+
+// And 
+var hungry = true;
+var foodHere = true;
+
+var eat = function() {
+  if (hungry && foodHere){
+      return true;
+  }
+  else {
+      return false;
+  }
+};
+
+eat();
+
+// Or
+var tired = true;
+var bored = false;
+
+var nap = function() {
+  if (tired || bored) {
+      return true;
+  }
+  else {
+      return false;
+  }
+};
+
+nap();
+
+// Not
+var programming = false;
+
+var happy = function() {
+    if (!programming) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+
+happy();
