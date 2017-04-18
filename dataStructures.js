@@ -78,3 +78,46 @@ ar myOwnObject = new Object();
 
 myOwnObject.name = "Muhammet";
 myOwnObject.age = 27;
+
+// -------------------------------------------------------------------------------------
+
+// Contact List
+var friends = {};
+
+friends.bill = {
+    firstName: "Bill",
+    lastName: "Gates",
+    number: "(206) 555-5555",
+    address: ['One Microsoft Way','Redmond','WA','98052']
+};
+
+friends.steve = {
+  firstName: "Steve",
+  lastName: "Jobs",
+  number: "(408) 555-5555",
+  address: ['1 Infinite Loop','Cupertino','CA','95014']
+};
+
+var list = function() {
+    console.log("Your contacts \n__________________________");
+    for (var key in friends) {
+        console.log(key);
+        console.log("-----------------------------------------------");
+    }
+}
+
+var search = function(name) {
+    for(var prop in friends) {
+        if(friends[prop].firstName === name) {
+          console.log(friends[prop]);
+          return friends[prop];
+        }
+        else {
+            console.log("Sorry that contact does not exist!");
+        }
+    }
+ }
+    
+
+list()    
+search("Bill");
