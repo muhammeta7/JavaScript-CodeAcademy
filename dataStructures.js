@@ -54,3 +54,27 @@ object3.name = "Justin";
 object1.age = 27;
 object2.age = 22;
 object3.age = 19;
+
+// Heterogeneous arrays
+var myArray = [19, true, 'string', {name: 'Moe'}];
+
+// Multidimensional arrays
+var me = {
+    name: "Muhammet",
+    age: 27
+};
+
+var newArray = [ [2,3], [me] ] ;
+
+// Editing an existing object
+var myObject = {
+  name: 'Eduardo',
+  type: 'Most excellent',
+  interests: ["hiking", "coding", "traveling"]
+};
+
+// Creating your own object
+ar myOwnObject = new Object();
+
+myOwnObject.name = "Muhammet";
+myOwnObject.age = 27;
