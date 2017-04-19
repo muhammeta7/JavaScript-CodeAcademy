@@ -84,3 +84,35 @@ var dog = {
 var species = dog["species"];
 var weight = dog["weight"];
 var age = dog["age"];
+
+// Another way to create objects
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// Here is susan1, in literal notation
+var susan1 = {
+  name: "Susan Jordan",
+  age: 24
+};
+// Make a new susan2 object, using a constructor instead
+var susan2 = new Object();
+susan2.name = "Susan Jordan";
+susan2.age = 24;
+
+// Putting it all together
+var snoopy = {
+    species: "beagle",
+    age: 10
+}
+
+var buddy = new Object();
+buddy.species= "golden retriever";
+buddy.age= 5;
+
+// More practice
+var bicycle = new Object();
+bicycle.speed = 0;
+bicycle.gear = 1;
+bicycle.frame_material= "carbon fiber";
+
+console.log(bicycle)
