@@ -78,3 +78,34 @@ var aProperty = "job";
 console.log(james[aProperty]);
 
 // I.D. Please
+// complete these definitions so that they will have
+// the appropriate types
+var anObj = { job: "I'm an object!" };
+var aNumber = 42;
+var aString = "I'm a string!";
+
+console.log(typeof anObj  ); // should print "object"
+console.log(typeof aNumber  ); // should print "number"
+console.log(typeof aString  ); // should print "string"
+
+// Know Thyself
+var myObj = {
+    // finish myObj
+    name: "Something"
+};
+
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+
+// Dressed to Impress
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+if(suitcase.hasOwnProperty("shorts")) {
+    console.log(suitcase.shorts);
+}
+else {
+    suitcase.shorts = "Gym shorts";
+    console.log(suitcase.shorts);
+}
