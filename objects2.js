@@ -109,3 +109,21 @@ else {
     suitcase.shorts = "Gym shorts";
     console.log(suitcase.shorts);
 }
+
+// Simple for loop to print out keys of objects
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+for (var i in nyc) {
+    console.log(i);
+};
+
+// write a for-in loop to print the value of nyc's keys then values
+for (i in nyc) {
+    console.log(i);
+    console.log(nyc[i]);
+}
