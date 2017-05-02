@@ -181,3 +181,170 @@ printPersonName(bob);
 // then use printPersonName to print your name
 var me = new Person("Muhammet Aydin", 27);
 printPersonName(me);
+
+// Prototype to the Rescue
+function Dog (breed) {
+  this.breed = breed;
+};
+
+// here we make buddy and teach him how to bark
+var buddy = new Dog("golden Retriever");
+//  Prototype allows for all dogs to have the new method
+Dog.prototype.bark = function() {
+  console.log("Woof");
+};
+buddy.bark();
+
+// here we make snoopy
+var snoopy = new Dog("Beagle");
+/// this time it works!
+snoopy.bark();
+
+// Prototype Practice
+function Cat(name, breed) {
+    this.name = name;
+    this.breed = breed;
+}
+
+// let's make some cats!
+var cheshire = new Cat("Cheshire Cat", "British Shorthair");
+var gary = new Cat("Gary", "Domestic Shorthair");
+
+// add a method "meow" to the Cat class that will allow
+// all cats to print "Meow!" to the console
+Cat.prototype.meow = function() {
+    console.log("Meow!");
+}
+
+// add code here to make the cats meow!
+cheshire.meow();
+gary.meow();
+
+// It's all in the Genes
+// create your Animal class here
+function Animal(name,numLegs){
+    this.name = name;
+    this.numLegs = numLegs;
+}
+
+// create the sayName method for Animal
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+}
+
+// provided code to test above constructor and method
+var penguin = new Animal("Captain Cook", 2);
+penguin.sayName();
+
+// Marching Penguins
+// create a Penguin constructor here
+function Penguin(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+
+// create a sayName method for Penguins here
+Penguin.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+// our test code
+var theCaptain = new Penguin("Captain Cook", 2);
+theCaptain.sayName();
+
+// Black and White Penguin Magic
+// the original Animal class and sayName method
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+// define a Penguin class
+function Penguin (name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+// set its prototype to be a new instance of Animal
+Penguin.prototype = new Animal();
+
+var penguin = new Penguin("Philip");
+penguin.sayName();
+
+// Penguins, Properties, and the Prototype
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+// create your Emperor class here and make it inherit from Penguin
+function Emperor(name) {
+    this.name = name;
+}
+
+Emperor.prototype = new Penguin();
+
+// create an "emperor" object and print the number of legs it has
+var emperor = new Emperor("Jim");
+console.log(emperor.numLegs);
+
+// Up the Prototype Chain
+// original classes
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+    this.isAlive = true;
+}
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+function Emperor(name) {
+    this.name = name;
+    this.saying = "Waddle waddle";
+}
+
+// set up the prototype chain
+Penguin.prototype = new Animal();
+Emperor.prototype = new Penguin();
+
+var myEmperor = new Emperor("Jules");
+
+console.log(myEmperor.saying); // should print "Waddle waddle"
+console.log(myEmperor.numLegs); // should print 2
+console.log(myEmperor.isAlive); // should print true
+
+// Open to the Public
+// Public means they can be accessed outside the class
+function Person(first,last,age) {
+   this.firstName = first;
+   this.lastName = last;
+   this.age = age;
+}
+
+var john = new Person('John','Smith',30);
+var myFirst = john.firstName;
+var myLast = john.lastName;
+
+//declare variable myAge set to the age of the john object.
+var myAge = john.age;
+
+// Private Variables 
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+}
+
+// create your Person 
+var john = new Person("Johnny", "Fisher", 33)
+
+// try to print his bankBalance
+// Will return undefined
+console.log(john.bankBalance)
+
+// Accessing Private Variables
