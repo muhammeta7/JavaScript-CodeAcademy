@@ -410,3 +410,44 @@ var john = new Person('John','Smith',30);
 var myBalance = john.askTeller(1234)
 
 // Looks For-In to Me
+var languages = {
+    english: "Hello!",
+    french: "Bonjour!",
+    notALanguage: 4,
+    spanish: "Hola!"
+};
+
+// print hello in the 3 different languages
+for (var i in languages) {
+    if (typeof languages[i] == "string"){
+        console.log(languages[i]);
+    }
+}
+
+// Hello? Yes, This is Dog
+function Dog (breed) {
+    this.breed = breed;
+};
+
+// add the sayHello method to the Dog class 
+// so all dogs now can say hello
+Dog.prototype.sayHello = function(breed) {
+    console.log("Hello this is a " + this.breed + " dog");
+}
+
+var yourDog = new Dog("golden retriever");
+yourDog.sayHello();
+
+var myDog = new Dog("dachshund");
+myDog.sayHello();
+
+// So Meta I can't Take It!
+// what is this "Object.prototype" anyway...?
+var prototypeType = typeof Object.prototype
+console.log(prototypeType);
+
+// now let's examine it!
+var hasOwn = Object.prototype.hasOwnProperty("hasOwnProperty");
+console.log(hasOwn);
+
+// Private Eye
