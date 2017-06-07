@@ -66,4 +66,52 @@ console.log("January".substring(0,3));
 console.log("Melbourne is great".substring(0,12));
 console.log("Hamburgers".substring(3,10));
 
-// Variables
+// Variables: declare variables with keuword var
+var myAge = 26;
+console.log(myAge);
+// Change variable by simply adding new data
+myAge = 27;
+
+// Conclusion
+var myColor = "Yo";
+console.log(myColor.length);
+
+// Part 2
+var correct = 3;
+
+if ( correct == 3){
+    console.log("I finished my first course!");
+}
+else {
+    console.log("womp womp");
+}
+
+// ====================================================================================
+// Code Your Own Adventure
+var age = prompt("What's your age?");
+
+if (age > 13) {
+    console.log("You are free to play!");
+}
+else {
+    console.log("You are not old enough to play.");
+}
+
+console.log("You are at a Justin Bieber concert, and you hear this lyric 'Lace my shoes off, start racing.'");
+console.log("Suddenly, Bieber stops and says, 'Who wants to race me?'");
+var userAnswer = prompt("Do you want to race Bieber on stage?");
+
+if (userAnswer === "yes") {
+    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace!"     );
+}
+else {
+    console.log("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race         without pacing.'");
+}
+
+var feedback = prompt ("Rate the game from 0-10");
+if (feedback > 8) {
+    console.log("Thank you! We should race at the next concert!");
+}
+else {
+    console.log("I'll keep practicing coding and racing.");
+}
